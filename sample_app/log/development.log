@@ -2189,3 +2189,212 @@ Processing by TodolistsController#edit as HTML
 Completed 200 OK in 67ms (Views: 54.0ms | ActiveRecord: 2.0ms)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddImageIdToLists (20200202105707)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.2ms)[0m  [1m[35mALTER TABLE "lists" ADD "image_id" varchar[0m
+  ↳ db/migrate/20200202105707_add_image_id_to_lists.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200202105707"]]
+  ↳ bin/rails:9
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/todolists/7/edit" for 10.0.2.2 at 2020-02-02 11:13:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TodolistsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mList Load (1.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:25
+  Rendering todolists/edit.html.erb within layouts/application
+  Rendered todolists/edit.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 663ms (Views: 635.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/todolists/new" for 10.0.2.2 at 2020-02-02 11:20:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (18.4ms)
+Completed 500 Internal Server Error in 144ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<List:0x00007f029403e830>):
+    10: 	<%= f.text_area :body %>
+    11: 
+    12: 	<h4>画像</h4>
+    13: 	<%= f.attachment_field :image %>
+    14: 	
+    15: 	<%= f.submit '投稿' %>
+    16: 
+  
+app/views/todolists/new.html.erb:13:in `block in _app_views_todolists_new_html_erb__3159178563920839895_69824524970280'
+app/views/todolists/new.html.erb:4:in `_app_views_todolists_new_html_erb__3159178563920839895_69824524970280'
+Started GET "/todolists/new" for 10.0.2.2 at 2020-02-02 11:21:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (17.3ms)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `image_attachment_definition' for #<List:0x00007f0298027848>):
+    10: 	<%= f.text_area :body %>
+    11: 
+    12: 	<h4>画像</h4>
+    13: 	<%= f.attachment_field :image %>
+    14: 
+    15: 	<%= f.submit '投稿' %>
+    16: 
+  
+app/views/todolists/new.html.erb:13:in `block in _app_views_todolists_new_html_erb__3159178563920839895_69824558477740'
+app/views/todolists/new.html.erb:4:in `_app_views_todolists_new_html_erb__3159178563920839895_69824558477740'
+Started GET "/todolists/new" for 10.0.2.2 at 2020-02-02 11:22:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 630ms (Views: 584.4ms | ActiveRecord: 4.8ms)
+
+
+Started POST "/todolists" for 10.0.2.2 at 2020-02-02 11:22:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2/Pt3EKQXV+gJ4lfwpQu+Z6sKI6CzTSPlkKaumKzHA2Cdcik+yBgeTw1D3Wy6IpNqb4igmV1ayPqBwdsAwNgEg==", "list"=>{"title"=>"", "body"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f2520091428 @tempfile=#<Tempfile:/tmp/RackMultipart20200202-11229-vcbxx0.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"list[image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:11
+  [1m[36mList Create (2.9ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2020-02-02 11:22:26.199872"], ["updated_at", "2020-02-02 11:22:26.199872"], ["image_id", "5f77fb2c466c9e3274e3c3214dca31146c0d4f10548bde36e23b78044315"]]
+  ↳ app/controllers/todolists_controller.rb:11
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:11
+Redirected to http://localhost:3000/todolists/8
+Completed 302 Found in 35ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/todolists/8" for 10.0.2.2 at 2020-02-02 11:22:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mList Load (0.9ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (257.2ms)
+Completed 500 Internal Server Error in 290ms (ActiveRecord: 0.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `image' for #<#<Class:0x0000556bc448fca8>:0x00007f2520126fc8>):
+    3: <h2>本文</h2>
+    4: <p><%= @list.body %></p>
+    5: <h2>画像</h2>
+    6: <%= attachment_image_tag @list,image, :fill, 300, 300, format:'jpeg' %>
+    7: 
+    8: <p><%= link_to"編集",edit_todolist_path(@list.id) %></p>
+  
+app/views/todolists/show.html.erb:6:in `_app_views_todolists_show_html_erb___2077016995072511932_69898714299560'
+Started GET "/todolists/new" for 10.0.2.2 at 2020-02-02 11:23:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 396ms (Views: 352.7ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/todolists" for 10.0.2.2 at 2020-02-02 11:24:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bdv4pQnZayjCE7Hx2II3MmgM2wa1htEEt/WSiFcDq9w0Xd3dsGlWDl4BN9uo/pOGXx7RClI+jqjLsA9eNrPXww==", "list"=>{"title"=>"", "body"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f3f9dc989f0 @tempfile=#<Tempfile:/tmp/RackMultipart20200202-11249-eq2gdr.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"list[image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"投稿"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:11
+  [1m[36mList Create (3.5ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2020-02-02 11:24:00.904999"], ["updated_at", "2020-02-02 11:24:00.904999"], ["image_id", "3a7c62decbfc8b8270a669626d819029839acb09ae778abad7bbd997b188"]]
+  ↳ app/controllers/todolists_controller.rb:11
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:11
+Redirected to http://localhost:3000/todolists/9
+Completed 302 Found in 27ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/todolists/9" for 10.0.2.2 at 2020-02-02 11:24:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mList Load (1.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 1.1ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '8eb52255f66e18d3a424abec57368f0ea6f05fb9de8e97b1228598c74f6ecd42bf391e297555439d3e5314e0b6f9a011bb4de8f6dc2d16e322f0c6b920ca78d5'
+```
+
+):
+    3: <h2>本文</h2>
+    4: <p><%= @list.body %></p>
+    5: <h2>画像</h2>
+    6: <%= attachment_image_tag @list,:image, :fill, 300, 300, format:'jpeg' %>
+    7: 
+    8: <p><%= link_to"編集",edit_todolist_path(@list.id) %></p>
+  
+app/views/todolists/show.html.erb:6:in `_app_views_todolists_show_html_erb__2810380905790616421_69955354115600'
+Started GET "/todolists/new" for 10.0.2.2 at 2020-02-02 11:26:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 462ms (Views: 399.5ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/todolists" for 10.0.2.2 at 2020-02-02 11:27:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VgrpTY1LcH+JPxpocpVIwNdH73DOLxuo8GmsT/PcKkEPjMw1NPtNWRUtnEIC6ex04FXlfCmXRASMLDGZkmxWXg==", "list"=>{"title"=>"", "body"=>"", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007fa235c9a318 @tempfile=#<Tempfile:/tmp/RackMultipart20200202-11275-1mv7thi.png>, @original_filename="142_refileDownloadImage.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"list[image]\"; filename=\"142_refileDownloadImage.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:11
+  [1m[36mList Create (4.9ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at", "image_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["body", ""], ["created_at", "2020-02-02 11:27:02.778171"], ["updated_at", "2020-02-02 11:27:02.778171"], ["image_id", "701f91ccdbb44ecb7856905ec3b886a46c307bbf1f5cd6bbaa8320d4479b"]]
+  ↳ app/controllers/todolists_controller.rb:11
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:11
+Redirected to http://localhost:3000/todolists/10
+Completed 302 Found in 26ms (ActiveRecord: 8.5ms)
+
+
+Started GET "/todolists/10" for 10.0.2.2 at 2020-02-02 11:27:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mList Load (1.8ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 90ms (Views: 77.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/attachments/e42c65558f1bc24007972e14b92043a90a8bbf45/store/fill/300/300/701f91ccdbb44ecb7856905ec3b886a46c307bbf1f5cd6bbaa8320d4479b/image.jpeg" for 10.0.2.2 at 2020-02-02 11:27:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-02-02 11:27:03 +0000] GET "/e42c65558f1bc24007972e14b92043a90a8bbf45/store/fill/300/300/701f91ccdbb44ecb7856905ec3b886a46c307bbf1f5cd6bbaa8320d4479b/image.jpeg" 200 154.2ms
+

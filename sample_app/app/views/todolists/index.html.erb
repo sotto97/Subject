@@ -6,4 +6,6 @@
 	  </span>
   <p>本文</p>
   <span><%= list.body %></span>
+  <p>画像</p>
+  <% attachment_iamge_tag list, :image, :fill, 100, 100, format:'jpeg' %>
 <% end %>
