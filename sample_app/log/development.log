@@ -2105,3 +2105,87 @@ Processing by TodolistsController#index as HTML
 Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 0.4ms)
 
 
+Started GET "/todolists/7edit" for 10.0.2.2 at 2020-02-02 10:32:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"7edit"}
+  [1m[36mList Load (2.1ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (151.8ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_todolist_patch' for #<#<Class:0x0000560762d17a58>:0x00007f084800fa80>):
+    3: <h2>本文</h2>
+    4: <p><%= @list.body %></p>
+    5: <h2>画像</h2>
+    6: <p><%= link_to"編集",edit_todolist_patch(@list.id) %></p>
+  
+app/views/todolists/show.html.erb:6:in `_app_views_todolists_show_html_erb___700216190325050436_69836772344400'
+Started GET "/todolists/7/edit" for 10.0.2.2 at 2020-02-02 10:32:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mList Load (1.5ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:25
+  Rendering todolists/edit.html.erb within layouts/application
+  Rendered todolists/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 125ms (Views: 110.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/todolists/8/" for 10.0.2.2 at 2020-02-02 10:33:04 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find List with 'id'=8):
+  
+app/controllers/todolists_controller.rb:21:in `show'
+Started GET "/todolists/7" for 10.0.2.2 at 2020-02-02 10:37:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mList Load (0.6ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (151.0ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `edit_todolist_patch' for #<#<Class:0x0000560762d17a58>:0x00007f08440ad6a8>):
+    3: <h2>本文</h2>
+    4: <p><%= @list.body %></p>
+    5: <h2>画像</h2>
+    6: <p><%= link_to"編集",edit_todolist_patch(@list.id) %></p>
+  
+app/views/todolists/show.html.erb:6:in `_app_views_todolists_show_html_erb___700216190325050436_69836739014680'
+Started GET "/todolists/7" for 10.0.2.2 at 2020-02-02 10:38:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 69ms (Views: 61.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/todolists/7/edit" for 10.0.2.2 at 2020-02-02 10:38:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mList Load (2.0ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:25
+  Rendering todolists/edit.html.erb within layouts/application
+  Rendered todolists/edit.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 67ms (Views: 54.0ms | ActiveRecord: 2.0ms)
+
+
