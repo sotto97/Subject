@@ -2398,3 +2398,61 @@ Started GET "/attachments/e42c65558f1bc24007972e14b92043a90a8bbf45/store/fill/30
 Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
 Refile::App: [2020-02-02 11:27:03 +0000] GET "/e42c65558f1bc24007972e14b92043a90a8bbf45/store/fill/300/300/701f91ccdbb44ecb7856905ec3b886a46c307bbf1f5cd6bbaa8320d4479b/image.jpeg" 200 154.2ms
 
+Started GET "/todolists/1" for 10.0.2.2 at 2020-02-02 11:53:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (1.3ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (177.8ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `delete' for #<#<Class:0x000055b32d20b828>:0x000055b32d1e6190>):
+    6: <%= attachment_image_tag @list,:image, :fill, 300, 300, format:'jpeg' %>
+    7: 
+    8: <%= link_to"編集",edit_todolist_path(@list.id) %>
+    9: <%= link_to"削除",destroy_todolist_path(@list.id), method:delete, "data-comfirm"=>"本当に削除しますか？" %>
+  
+app/views/todolists/show.html.erb:9:in `_app_views_todolists_show_html_erb__1278454760525164368_47114022320960'
+Started GET "/todolists/1" for 10.0.2.2 at 2020-02-02 11:54:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.8ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 404ms (Views: 394.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/todolists/7" for 10.0.2.2 at 2020-02-02 11:54:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 74ms (Views: 66.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todolists/8" for 10.0.2.2 at 2020-02-02 11:54:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mList Load (2.0ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:21
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 90ms (Views: 77.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/attachments/64e1a5dea02eea0ac69f26a6bf85763a057663ee/store/fill/300/300/5f77fb2c466c9e3274e3c3214dca31146c0d4f10548bde36e23b78044315/image.jpeg" for 10.0.2.2 at 2020-02-02 11:54:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-02-02 11:54:56 +0000] GET "/64e1a5dea02eea0ac69f26a6bf85763a057663ee/store/fill/300/300/5f77fb2c466c9e3274e3c3214dca31146c0d4f10548bde36e23b78044315/image.jpeg" 200 73.9ms
+
