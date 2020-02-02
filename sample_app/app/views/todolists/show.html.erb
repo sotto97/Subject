@@ -1,4 +1,6 @@
 <h2>タイトル</h2>
-	<p><%= @list.title %></p>
-	<h2>本文</h2>
-	<p><%= @list.body %></p>
+<p><%= @list.title %></p>
+<h2>本文</h2>
+<p><%= @list.body %></p>
+<h2>画像</h2>
+<p><%= link_to"編集",edit_todolist_patch(@list.id) %></p>
