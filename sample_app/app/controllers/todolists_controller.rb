@@ -1,0 +1,29 @@
+class TodolistsController < ApplicationController
+  def new
+  	# Viewへ渡すためのインスタンス変数にからのモデルオブジェクトを生成
+  		@list=List.new
+  end
+
+  # 追加
+  def create
+  		list=List.new(list_params)
+  		# bdへ保存する
+  		list.save
+  		# トップ画面へリダイレクト
+  		redirect_to todolist_path(list.id)
+  end
+
+  def index
+  		@lists=List.all
+  end
+
+ 	def show
+ 			@list=List.find(params[:id])
+ 	end
+
+  private
+  def list_params
+  		params.require(:list).permit(:title, :body)
+  end
+
+end
