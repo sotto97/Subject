@@ -1,2 +1,17 @@
-<h1>Booklists#index</h1>
-<p>Find me in app/views/booklists/index.html.erb</p>
+<h1>Books</h1>
+<table>
+	<tr>
+		<th>Title</th>
+		<th>Body</th>
+		<th colspan="2"></th>
+	</tr>
+
+	<% @lists.each do |list| %>
+		<tr>
+			<td><%= list.title %></td>
+			<td><%= list.body %></td>
+			<td><%= link_to 'Show', booklists_path(params[:id]) %></td>
+		</tr>
+	<% end %>
+
+</table>

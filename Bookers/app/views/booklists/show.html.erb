@@ -1,2 +1,15 @@
-<h1>Booklists#show</h1>
-<p>Find me in app/views/booklists/show.html.erb</p>
+<!-- 成功した場合 Succesfully の文字を出す -->
+<h1>Books</h1>
+
+	<p>
+		<strong>Title</strong>
+		<%= @list.title %>
+	</p>
+
+	<p>
+		<strong>Body</strong>
+		<%= @list.body %>
+	</p>
+
+	<br>
+	<%= link_to "Edit", booklists_path %>
