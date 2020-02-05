@@ -11,6 +11,9 @@
 			<td><%= list.title %></td>
 			<td><%= list.body %></td>
 			<td><%= link_to 'Show', booklists_path(params[:id]) %></td>
+			<td><%= link_to 'Edit', booklists_path(params[:id]) %></td>
+			<td><%= link_to 'Destroy', booklists_path(params[:id]) %></td>
+
 		</tr>
 	<% end %>
 
