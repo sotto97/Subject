@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   resources :booklists
   get 'booklists'=>'booklists#index'
   post 'booklists'=>'booklists#create'
+  post 'booklists'=>'booklists#new'
+  patch 'booklists/:id'=>'booklists#update', as: 'update_booklist'
+  delete 'booklists/:id'=>'booklists#destroy', as: 'destroy_booklist'
 end

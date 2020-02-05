@@ -1,16 +1,16 @@
-<!-- 成功した場合 Succesfully の文字を出す -->
-<h1>Books</h1>
+<!-- notice: 'Book was successfully created.' -->
+<p>
+	<strong>Title</strong>
+	<%= @list.title %>
+</p>
 
-	<p>
-		<strong>Title</strong>
-		<%= @list.title %>
-	</p>
+<p>
+	<strong>Body</strong>
+	<%= @list.body %>
+</p>
 
-	<p>
-		<strong>Body</strong>
-		<%= @list.body %>
-	</p>
-
-	<br>
-	<%= link_to "Edit", booklists_path %>
-	<%= link_to "Back", booklists_path %>
+<p class="space">
+<a><%= link_to "Edit", edit_booklist_path %></a>
+&thinsp;|&thinsp;
+<a><%= link_to "Back", booklists_path %></a>
+</p>
