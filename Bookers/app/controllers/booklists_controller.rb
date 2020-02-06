@@ -9,11 +9,14 @@ class BooklistsController < ApplicationController
   end
 
   def create
-      list=List.new(list_params)
-      if list.save
-        redirect_to booklist_path(list)
+      @list=List.new(list_params)
+      @lists=List.all
+      if @list.save
+        flash[:notice]='Successfully'
+        redirect_to booklist_path(@list)
       else
-        
+        render :index
+      end
   end
 
   def show

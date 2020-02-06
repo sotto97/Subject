@@ -1,11 +1,16 @@
-<!-- notice: 'Book was successfully created.' -->
+<% if flash[:notice] %>
+  <p class="notice">
+  	<%= flash[:notice] %>
+  </p>
+<% end %>
+
 <p>
-	<strong>Title</strong>
+	<strong>Title:</strong>
 	<%= @list.title %>
 </p>
 
 <p>
-	<strong>Body</strong>
+	<strong>Body:</strong>
 	<%= @list.body %>
 </p>
 

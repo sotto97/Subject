@@ -21,16 +21,26 @@
 <h2>New book</h2>
 <%=form_for(@list, url: '/booklists')do |f| %>
 
+<% if @list.errors.any? %>
+  <div id="error_explanation" class="alert_error">
+    <ul>
+      <% @list.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 	<div class="field">
 		<p>
-		<%= f.label :title %><br>
+		<%= f.label :title %>
 		<%= f.text_field :title %>
 		</p>
 	</div>
 
 	<div class="field">
 		<p>
-		<%= f.label :body %><br>
+		<%= f.label :body %>
 		<%= f.text_area :body %>
 		</p>
 	</div>

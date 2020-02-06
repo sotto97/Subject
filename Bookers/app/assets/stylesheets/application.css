@@ -91,3 +91,17 @@ form p{
 .space{
 	margin: 0;
 }
+
+.notice{
+	color: #008000;
+}
+
+/*入力フォームのエラー時*/
+
+.alert_error li{
+	font-family: verdana;
+}
+
+div .field_with_errors {
+	font-family: verdana;
+}
