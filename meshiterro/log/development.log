@@ -1,0 +1,2770 @@
+Started GET "/" for 10.0.2.2 at 2020-02-08 03:46:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20200208035741)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200208035741_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20200208035741_devise_create_users.rb:39
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20200208035741_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200208035741"]]
+  ↳ bin/rails:9
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (2.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-02-08 04:05:23.110564"], ["updated_at", "2020-02-08 04:05:23.110564"]]
+  ↳ bin/rails:9
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 10.0.2.2 at 2020-02-08 04:10:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 04:10:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/sessions/new.html.erb within layouts/application (95.7ms)
+Completed 200 OK in 4857ms (Views: 4817.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:10:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered /var/lib/gems/2.5.0/gems/devise-4.7.1/app/views/devise/registrations/new.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 229ms (Views: 226.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 04:15:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (2.7ms)
+Completed 200 OK in 13ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 04:15:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (42.0ms)
+Completed 200 OK in 1113ms (Views: 1093.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:15:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 220ms (Views: 219.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 04:16:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 249ms (Views: 247.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 04:17:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 173ms (Views: 171.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 04:17:15 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (40.6ms)
+Completed 200 OK in 1031ms (Views: 1010.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:17:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 177ms (Views: 175.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 04:21:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 1231ms (Views: 1208.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:21:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.5ms)
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (104.8ms)
+Completed 200 OK in 599ms (Views: 595.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:21:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 204ms (Views: 202.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:36:03 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (33.6ms)
+Completed 200 OK in 1144ms (Views: 1119.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:41:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 138ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `device_controller?' for #<Devise::RegistrationsController:0x00005630c9345f80>):
+  
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `all?'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `block in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:41:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 122ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `device_controller?' for #<Devise::RegistrationsController:0x00005630c893a6a8>):
+  
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `all?'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `block in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:41:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `device_controller?' for #<Devise::RegistrationsController:0x00007fa8f16b1e98>):
+  
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `block (2 levels) in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `all?'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:178:in `block in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:42:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `configure_permitted_patameters' for #<Devise::RegistrationsController:0x0000555d5d7d6260>):
+  
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:42:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+Completed 500 Internal Server Error in 92ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `configure_permitted_patameters' for #<Devise::RegistrationsController:0x0000555d5edab900>):
+  
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:426:in `block in make_lambda'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:179:in `block (2 levels) in halting_and_conditional'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:180:in `block in halting_and_conditional'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `each'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:131:in `run_callbacks'
+actionpack (5.2.4.1) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.1) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.1) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.1) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.1) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.1) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.1) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.1) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.1) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.1) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.1) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.1) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.1.2) lib/rack/tempfile_reaper.rb:17:in `call'
+rack (2.1.2) lib/rack/etag.rb:27:in `call'
+rack (2.1.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.1.2) lib/rack/head.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.1.2) lib/rack/session/abstract/id.rb:269:in `context'
+rack (2.1.2) lib/rack/session/abstract/id.rb:263:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.1) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 04:42:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 1099ms (Views: 1080.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 10.0.2.2 at 2020-02-08 04:43:17 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RMk0t15wgXflupizHjwrkDcLRe/hxwEzEJH3Ru19Pjtz6oGe9tB9cv6SO0iC5HgS2+bhsj8yx2P7Cyq7HcvYyg==", "user"=>{"name"=>"nobody", "email"=>"sotto.bw97@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sotto.bw97@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (4.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["email", "sotto.bw97@gmail.com"], ["encrypted_password", "$2a$11$XPPvukCIVbNDTVLhE2ndXewCiYm5UuFQoSbbN3sOZMXomEOtcEvEe"], ["name", "nobody"], ["created_at", "2020-02-08 04:43:17.941510"], ["updated_at", "2020-02-08 04:43:17.941510"]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 244ms (ActiveRecord: 14.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 04:43:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /var/lib/gems/2.5.0/gems/railties-5.2.4.1/lib/rails/templates/rails/welcome/index.html.erb (7.3ms)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePostImages (20200208050314)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200208050314_create_post_images.rb:3
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "post_images" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shop_name" text, "image_id" varchar, "caption" text, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200208050314_create_post_images.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200208050314"]]
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 10.0.2.2 at 2020-02-08 05:17:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (2033.0ms)
+Completed 200 OK in 2672ms (Views: 2657.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 05:18:20 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 391ms (Views: 333.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:18:51 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 236ms (Views: 221.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 05:29:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (15.3ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 500 Internal Server Error in 419ms (ActiveRecord: 4.5ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_user_sesstion_path' for #<#<Class:0x00007f5934399ab0>:0x00007f5935ea4aa8>):
+    33:             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
+    34:               <% if user_signed_in? %>
+    35:                 <li class="">
+    36:                   <%= link_to "ログアウト", destroy_user_sesstion_path, method: :delete %>
+    37:                 </li>
+    38:                 <li class="">
+    39:                   <%= link_to '投稿フォーム', new_post_image_path %>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__3704431728332928410_70010617955580'
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:30:18 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 500 Internal Server Error in 1274ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_user_sesstion_path' for #<#<Class:0x00005650f66a5e80>:0x00005650f64208b8>):
+    33:             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
+    34:               <% if user_signed_in? %>
+    35:                 <li class="">
+    36:                   <%= link_to "ログアウト", destroy_user_sesstion_path, method: :delete %>
+    37:                 </li>
+    38:                 <li class="">
+    39:                   <%= link_to '投稿フォーム', new_post_image_path %>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__4047529525660382504_47452865384720'
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:30:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 500 Internal Server Error in 429ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `destroy_user_sesstion_path' for #<#<Class:0x00005650f66a5e80>:0x00007f805e2c2258>):
+    33:             <ul class="nav navbar-nav navbar-right" data-hover="dropdown" data-animations="zoomIn fadeIn fadeInUp fadeIn">
+    34:               <% if user_signed_in? %>
+    35:                 <li class="">
+    36:                   <%= link_to "ログアウト", destroy_user_sesstion_path, method: :delete %>
+    37:                 </li>
+    38:                 <li class="">
+    39:                   <%= link_to '投稿フォーム', new_post_image_path %>
+  
+app/views/layouts/application.html.erb:36:in `_app_views_layouts_application_html_erb__4047529525660382504_70094656262200'
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:32:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 238ms (Views: 228.7ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-02-08 05:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"g5SqSjaFXjaLC0dH518HIvSTw/kGOsjawQ6oPo6AGr20tx9jniWiM5Aj5Lx7h1SgGH5npNjPDooqlHXDfjb8TA=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 61ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 05:32:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 221ms (Views: 215.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:32:25 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 184ms (Views: 169.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 05:32:28 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 165ms (Views: 159.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-02-08 05:32:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wqXGxjUbNX1pVwlu3DRWaJKrhIjV6E86+SpgySvRuj4EjOEro24VFSmR9H4Gs5B5nRj+6cD3RlnJQzrS5aKg2A==", "user"=>{"email"=>"sotto.bw97@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"サインイン"}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sotto.bw97@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 247ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 05:32:30 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 267ms (Views: 251.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:32:32 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 160ms (Views: 149.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:55:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  
+SyntaxError (/vagrant/Subject/meshiterro/app/controllers/post_images_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/post_images_controller.rb:18: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:56:07 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 63ms (ActiveRecord: 4.6ms)
+
+
+  
+SyntaxError (/vagrant/Subject/meshiterro/app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:56:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 4.5ms)
+
+
+  
+SyntaxError (/vagrant/Subject/meshiterro/app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:56:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/Subject/meshiterro/app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:56:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/Subject/meshiterro/app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:57:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/vagrant/Subject/meshiterro/app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+          end
+             ^):
+  
+app/views/post_images/new.html.erb:50: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 05:59:35 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (5.2ms)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<PostImage:0x00007fe6dc14b278>):
+    10:                 <span>画像投稿フォーム</span>
+    11:               </h3>
+    12:             </div>
+    13:             <%= form_for(@post_image.url:post_images_path)do |f| %>
+    14:               <% if @post_image.errors.any? %>
+    15:                 <div id="error_explanation">
+    16:                   <h2><%= @post_image.error.count %>件のエラーが発生しました。</h2>
+  
+app/views/post_images/new.html.erb:13:in `_app_views_post_images_new_html_erb___1377438953582729843_70314755772220'
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 06:01:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<PostImage:0x000055b86e1dd478>):
+    10:                 <span>画像投稿フォーム</span>
+    11:               </h3>
+    12:             </div>
+    13:             <%= form_for(@post_image.url:post_images_path)do |f| %>
+    14:               <% if @post_image.errors.any? %>
+    15:                 <div id="error_explanation">
+    16:                   <h2><%= @post_image.error.count %>件のエラーが発生しました。</h2>
+  
+app/views/post_images/new.html.erb:13:in `_app_views_post_images_new_html_erb___1377438953582729843_47125304887360'
+Started GET "/post_images" for 10.0.2.2 at 2020-02-08 06:01:09 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (687.3ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 1068ms (Views: 1055.9ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 06:01:12 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (8.7ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `url' for #<PostImage:0x00007fe6d82fee20>):
+    10:                 <span>画像投稿フォーム</span>
+    11:               </h3>
+    12:             </div>
+    13:             <%= form_for(@post_image.url:post_images_path)do |f| %>
+    14:               <% if @post_image.errors.any? %>
+    15:                 <div id="error_explanation">
+    16:                   <h2><%= @post_image.error.count %>件のエラーが発生しました。</h2>
+  
+app/views/post_images/new.html.erb:13:in `_app_views_post_images_new_html_erb___1377438953582729843_70314723110160'
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 06:01:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (14.8ms)
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 234ms (Views: 217.1ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/post_images" for 10.0.2.2 at 2020-02-08 06:02:11 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/4zk/u77wT1NBVAs15XBnYzwALqh7CcBn3mdjXd7VLb/DK/a5WSEDEbwHRYhzNDB97xU0jDnmC1bBQeV4ChAA==", "post_image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe6d56f9b68 @tempfile=#<Tempfile:/tmp/RackMultipart20200208-6639-jqjy67.png>, @original_filename="スクリーンショット 2020-02-04 8.13.42.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post_image[image]\"; filename=\"\xE3\x82\xB9\xE3\x82\xAF\xE3\x83\xAA\xE3\x83\xBC\xE3\x83\xB3\xE3\x82\xB7\xE3\x83\xA7\xE3\x83\x83\xE3\x83\x88 2020-02-04 8.13.42.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"コメント"}, "commit"=>"送信"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[36mPostImage Create (6.4ms)[0m  [1m[32mINSERT INTO "post_images" ("image_id", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_id", "f23173473a7f81c5ba43c5ebe0d5f68b07f78134a02915c23dbc5662ee2a"], ["caption", "コメント"], ["user_id", 1], ["created_at", "2020-02-08 06:02:11.724337"], ["updated_at", "2020-02-08 06:02:11.724337"]]
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_images_controller.rb:8
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 12.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"post_images"}, missing required keys: [:id]):
+  
+app/controllers/post_images_controller.rb:9:in `create'
+Started POST "/post_images" for 10.0.2.2 at 2020-02-08 06:02:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R/4zk/u77wT1NBVAs15XBnYzwALqh7CcBn3mdjXd7VLb/DK/a5WSEDEbwHRYhzNDB97xU0jDnmC1bBQeV4ChAA==", "post_image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe9504c21d8 @tempfile=#<Tempfile:/tmp/RackMultipart20200208-6659-1d0hwqj.png>, @original_filename="スクリーンショット 2020-02-04 8.13.42.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post_image[image]\"; filename=\"\xE3\x82\xB9\xE3\x82\xAF\xE3\x83\xAA\xE3\x83\xBC\xE3\x83\xB3\xE3\x82\xB7\xE3\x83\xA7\xE3\x83\x83\xE3\x83\x88 2020-02-04 8.13.42.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"コメント"}, "commit"=>"送信"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:7
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[36mPostImage Create (2.8ms)[0m  [1m[32mINSERT INTO "post_images" ("image_id", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_id", "f8a861b8513c84eb274ffbffb6e80e6085cf0e84bdb1c1bc47e6bfcc01b3"], ["caption", "コメント"], ["user_id", 1], ["created_at", "2020-02-08 06:02:43.048852"], ["updated_at", "2020-02-08 06:02:43.048852"]]
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[35m (3.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_images_controller.rb:8
+Redirected to http://localhost:3000/post_images
+Completed 302 Found in 127ms (ActiveRecord: 11.5ms)
+
+
+Started GET "/post_images" for 10.0.2.2 at 2020-02-08 06:02:43 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (742.3ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 1139ms (Views: 1129.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 06:02:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 196ms (Views: 181.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/post_images" for 10.0.2.2 at 2020-02-08 06:02:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Kr74x715hRHOni6yyB5GqvY5wYBddIBI0PBFLNhZbaWiQY3a1XXmfUxNqLb17Yvzf7tkoRh1hujLbCtZm4rmZg==", "post_image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fe9580aa868 @tempfile=#<Tempfile:/tmp/RackMultipart20200208-6659-vfvgun.png>, @original_filename="スクリーンショット 2020-02-04 8.13.42.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post_image[image]\"; filename=\"\xE3\x82\xB9\xE3\x82\xAF\xE3\x83\xAA\xE3\x83\xBC\xE3\x83\xB3\xE3\x82\xB7\xE3\x83\xA7\xE3\x83\x83\xE3\x83\x88 2020-02-04 8.13.42.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"コメント"}, "commit"=>"送信"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:7
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[36mPostImage Create (7.0ms)[0m  [1m[32mINSERT INTO "post_images" ("image_id", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_id", "9bc15208d61707fd07eea97d4b5134f76570f2cfe255836fd6b977cd1fde"], ["caption", "コメント"], ["user_id", 1], ["created_at", "2020-02-08 06:02:57.048638"], ["updated_at", "2020-02-08 06:02:57.048638"]]
+  ↳ app/controllers/post_images_controller.rb:8
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_images_controller.rb:8
+Redirected to http://localhost:3000/post_images
+Completed 302 Found in 102ms (ActiveRecord: 23.9ms)
+
+
+Started GET "/post_images" for 10.0.2.2 at 2020-02-08 06:02:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+Completed 200 OK in 242ms (Views: 234.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:04:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  Rendered post_images/index.html.erb within layouts/application (894.0ms)
+Completed 200 OK in 1450ms (Views: 1415.5ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:55:19 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.4ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (24.8ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 8.8ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'a276a4ed39c277ac872c454c77ae26892fcc7bce5c6cb59d9468f4e9af67a9f8c51b8e1bc9510f9a9e51ac314a9c1b3458f0109ab8afb0e9898f72753d6ef69f'
+```
+
+):
+    10: 
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                   <%= attachment_image_tag post_image, :image %>
+    14:                 </div>
+    15:               </div>
+    16: 
+  
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb___4192051894559591374_69833855375840'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb___4192051894559591374_69833855375840'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:56:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (16.6ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '9fa6f9302d0a423e9a300fbe37b6378672823bf8dad15f20394c63b5f9d051ea46aa2acbfa0420c59e73c49f49bfe5b94214c7dab09e65fb3594c9d3f74e9872'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb___4192051894559591374_69833651748580'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb___4192051894559591374_69833651748580'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb___4192051894559591374_69833651748580'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:56:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.4ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (12.1ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'efa781d4884d9b47167be338848dec41200de3f1e7507aa46dbada5b3057344225ba14383e125917ee18d0e0b654a3ada90937c7613b0b11d80325e497b9108a'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb___4192051894559591374_47262061055280'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb___4192051894559591374_47262061055280'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb___4192051894559591374_47262061055280'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:58:14 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (21.2ms)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 5.6ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '13cf50098b1a833977d6fec9b0954c910c2d1a63df5228e3b74403f322125dd8225bb4e9eb6e256ab410c3c7df5d88ef8fa7883b3b663ff07a34de86c4fce9d3'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925391867060'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925391867060'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925391867060'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:44 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (9.5ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '6e76fa80fd81e880cb7d12113cd986247af98283be71e8aaab318d162b191309c5e05dbb816553d44353a6ee28942084641c8da8fe79c80144231e86aa716157'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_47215616447220'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_47215616447220'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_47215616447220'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:45 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.4ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '85d1a5c272964335aed5db658574fb2790f7354955fea8dc8028524342951509710a7686f127f88a4d12cb88b0847fe06d8381422d3c48801f74556fee58199a'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_47215633624760'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_47215633624760'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_47215633624760'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (8.5ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'd5273fa1de682da2c034902a66febd79738cd2f5127a217f234d987eadd91562a30aab5f1630d7c36d33f2344a77ee8ff6de309eec5c027af5f4eefd01da0e91'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925392599200'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925392599200'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925392599200'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (11.5ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'c21fdb4123fba77f30f5a773f605f94eb14e550681f26550503513319ee66d39dc9ffff4a3f4d544b794a5ddc66c5f3583c22706b59cc6b555d138f23e5ed4cd'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925394749540'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925394749540'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925394749540'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:48 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.0ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (13.0ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'c2d5afa3f52d8a060cfc0ebbbe8aa2a7024ad4173942a7d7531e055f8ce7979cb1e2ae0e92d6976dfae003555cf38eb91e4a383311d1e2ff07185f14ae87255f'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925396529200'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925396529200'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925396529200'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (9.4ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'f6af73e902851c45fbf3bc6416548da37b0c69d62e9810ce543622337b956448bcc57cf42006a0037c70a5fa1f0482420573267b99b9e0f1411405bed5136637'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_47215625345420'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_47215625345420'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_47215625345420'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (11.7ms)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '27694a362e9735aa400934482c56d55718b92bfe43c0b7ff18eddbee4a0e690de7dbf87d7dde49b9a8d726c3f3f3b3aff88939b3d7778b2f6007f1b87b725373'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925391451260'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925391451260'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925391451260'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '4d974fa7f75b45a842e09270b06d00f06e714f69b7034d7bed96d2209436a192857f29a6d39bad154cea166863c32ebfbb5dc0e0db79ef8f845fcb3e00c24b54'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925393884400'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925393884400'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925393884400'
+Started GET "/" for 10.0.2.2 at 2020-02-08 06:59:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.4ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (5.9ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.2ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'a501d39e01525ba55bc093cfaec04c66e0ac238fa75f0b8636d0de8329011fb54a98e8020d560eeb4763127526bbe2bd0ed0ce4083ae0bdcaae685e3cebe716d'
+```
+
+):
+    11:               <div class="block-image">
+    12:                 <div class="view view-first">
+    13:                 <%= link_to post_image_path(post_image.id)do %>
+    14:                   <%= attachment_image_tag post_image, :image %>
+    15:                 <% end %>
+    16:                 </div>
+    17:               </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925395818300'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925395818300'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925395818300'
+Started GET "/sign_up" for 10.0.2.2 at 2020-02-08 07:00:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+actionpack (5.2.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.1.2) lib/rack/method_override.rb:24:in `call'
+rack (2.1.2) lib/rack/runtime.rb:24:in `call'
+activesupport (5.2.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.1.2) lib/rack/sendfile.rb:113:in `call'
+railties (5.2.4.1) lib/rails/engine.rb:524:in `call'
+puma (3.12.2) lib/puma/configuration.rb:227:in `call'
+puma (3.12.2) lib/puma/server.rb:674:in `handle_request'
+puma (3.12.2) lib/puma/server.rb:476:in `process_client'
+puma (3.12.2) lib/puma/server.rb:334:in `block in run'
+puma (3.12.2) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:02:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 2.0ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '79e36816a28f63fabba5be94961373feda2269979b1553c717b446ec6f012e879075b03961bef25bc9507fc7d5f7b2bffc25760379c3bd762eccbc99bcaa05d9'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_69925395820960'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_69925395820960'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_69925395820960'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:02:47 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (2.4ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '9924daf9abd2b611524e2f6f75d36927e494ae30108f0ffdd24d377076ba0b983d312c47556f7b037cde7002c0bc9cf1574aba37e68327bb277cd08f5e6c1cc4'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4585851316297663883_47215622686900'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4585851316297663883_47215622686900'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4585851316297663883_47215622686900'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:02:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (3.1ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (27.0ms)
+Completed 500 Internal Server Error in 124ms (ActiveRecord: 16.3ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '2bee745a55f18b902e5fe0ee18b11076909aa5fd6aa5755aaeba45cc864764b3f91d4bd7b81f97a54fe35d2fc5f8f868add8fe3502eba46653476f1e9c8cf5e6'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912708268740'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912708268740'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912708268740'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.6ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.8ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'ab2d5f7655bd5c288674503ce7d0dfaff257c01853cb0eff27f5e5c5f7dfb2d2c22f82908567c54e42579a02222aa877ef686d91741d17e954902192bf82e98c'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_47391406920920'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_47391406920920'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_47391406920920'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:54 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (16.1ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '450a63ad85e8e015bae2707ad9c657b8c135e4cfc7f5db7ba497444b63025db52b7c1de3aadb38c0e5d5a17a9d480ab22ca7ac3fc87dbf4e714240dbf2e4272a'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_47391424148500'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_47391424148500'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_47391424148500'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (12.9ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '5814cfaa59c7a53899ebf8491d1c62432a7489ae9c13e9e67464e2635a4e7126504c178862233bd04692c61c22f9786df4c49c1ddde855aa18664e69021f3c61'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912708970960'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912708970960'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912708970960'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.5ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (9.3ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '9a3fd7e816fd220830430e8e88cad34283d0f1da20ab12e759e1e41a00e45c50ba36b61a8f2f2b12d8bee0003a054e45a51ffd8e22ab61e26ea289281ae2497c'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912711115680'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912711115680'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912711115680'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:56 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '0b2b344f58805c616d62ad77507fdf9ab11d3c37774ad728f4204652087de71d8f2495bfda303d7428b1719b3a79934a616ac13fb9f339b7d52ecf704f4c41ea'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912712903520'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912712903520'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912712903520'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (9.7ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '969791b24326604dad593f68c5f48f25eeac614855354a9734a0707b59213153afee4265ad485442e32266054685296d5c756006b8cef8420e54668229d7e1be'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_47391415371180'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_47391415371180'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_47391415371180'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '0aad13e63947c3e32e20a0cf599252741668a66b8c7ad9997c3969058048654e9b99f60d439641b3057c8f3676ee12acf57e6fd2da5a504d55494ca025aa4d03'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912707718100'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912707718100'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912707718100'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (11.9ms)
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'ec651c9e017de85ff6e4d1b8632aa176265af833d3ea95832098baa228f25a67c1b91410935aa9fd37c78237aae1b2384a3f3cf020f28f773319da70e77a19d0'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912710217960'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912710217960'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912710217960'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 3.3ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '9235f11821730400c8fede70d985a12fbdb5d61d871cb1f8bcc873ee26fa2decf91d6fa2cc68b79693e75b059475ea322e05c1373716c41e6289375510ff7b09'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912712161380'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912712161380'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912712161380'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (10.9ms)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.9ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '4a5a01e8364126394a3fc8660221eea85d9ba3d7f2e5e1278f20b420aee5b6b519f75450af8799483231afbd82c49ecda844dd988016fd2c7c6c065c2157df08'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_47391412873180'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_47391412873180'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_47391412873180'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (8.4ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '0d48e8560bce515efe2f674ffa28e9e7c86697a4a730e66a65d57939c5bfb4f87c50cd750bf4d2580700961c9d2c3b6a6c2192d613c4a8b8410267121a31ecba'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69913007923800'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69913007923800'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69913007923800'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.5ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (11.2ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'c80aa6545b5d787330c47b5e2e5bf18765d5279e02c159fc5657adc860032226ae00bb2343199f79a336baab7da4dd9b0b4e7a6bbbdad93fe33c83f0ac33185a'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912708996600'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912708996600'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912708996600'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:03:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.6ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (13.3ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 1.6ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '91e820a02aa2b1ae3b59cbcae9f445854d31cb8e931ee5bb5ef3c89234eea2d9c327cf0155a305c041912d51f3d4daf6cf8ffdfd5ed61ecfcded1136ab28e1cf'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912710997280'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912710997280'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912710997280'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:04:00 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendered post_images/index.html.erb within layouts/application (12.4ms)
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '568709e701a20e8e03e00c14229bbe8d78a39516fc6037424e0cd3e3abe60f8955bcd12cbe02912f2f8e39e952e1f8f6274a9fe275fb0ae739a7594b6320157e'
+```
+
+):
+    11:                 <div class="block-image">
+    12:                   <div class="view view-first">
+    13:                   <%= link_to post_image_path(post_image.id)do %>
+    14:                     <%= attachment_image_tag post_image, :image %>
+    15:                   <% end %>
+    16:                   </div>
+    17:                 </div>
+  
+app/views/post_images/index.html.erb:14:in `block (2 levels) in _app_views_post_images_index_html_erb__4019704939288443881_69912712707260'
+app/views/post_images/index.html.erb:13:in `block in _app_views_post_images_index_html_erb__4019704939288443881_69912712707260'
+app/views/post_images/index.html.erb:7:in `_app_views_post_images_index_html_erb__4019704939288443881_69912712707260'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:05:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.5ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (691.3ms)
+Completed 200 OK in 1138ms (Views: 1093.2ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/attachments/32c125e657c54f007368b7da2dfe6c65bc97e68d/store/f23173473a7f81c5ba43c5ebe0d5f68b07f78134a02915c23dbc5662ee2a/image" for 10.0.2.2 at 2020-02-08 07:05:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-02-08 07:05:50 +0000] GET "/32c125e657c54f007368b7da2dfe6c65bc97e68d/store/f23173473a7f81c5ba43c5ebe0d5f68b07f78134a02915c23dbc5662ee2a/image" 200 15.7ms
+
+Started GET "/attachments/ce0fdf96f9117c3281d81548a05f4af38c8abb62/store/9bc15208d61707fd07eea97d4b5134f76570f2cfe255836fd6b977cd1fde/image" for 10.0.2.2 at 2020-02-08 07:05:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/3f3466cad1966ff764de358559035488191f39b9/store/f8a861b8513c84eb274ffbffb6e80e6085cf0e84bdb1c1bc47e6bfcc01b3/image" for 10.0.2.2 at 2020-02-08 07:05:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-02-08 07:05:50 +0000] GET "/3f3466cad1966ff764de358559035488191f39b9/store/f8a861b8513c84eb274ffbffb6e80e6085cf0e84bdb1c1bc47e6bfcc01b3/image" 200 11.3ms
+
+Refile::App: [2020-02-08 07:05:50 +0000] GET "/ce0fdf96f9117c3281d81548a05f4af38c8abb62/store/9bc15208d61707fd07eea97d4b5134f76570f2cfe255836fd6b977cd1fde/image" 200 20.1ms
+
+Started GET "/post_images/3" for 10.0.2.2 at 2020-02-08 07:05:57 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (1.2ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (200.7ms)
+Completed 500 Internal Server Error in 250ms (ActiveRecord: 5.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_image' for #<#<Class:0x00007f26fc4b1f20>:0x00007f26ec031140>):
+    30:               </li>
+    31:             </ul>
+    32:             <div class="post-content-inner mt-20">
+    33:               <p><%= post_image.caption %></p>
+    34:             </div>
+    35:           </div>
+    36: 
+  
+app/views/post_images/show.html.erb:33:in `_app_views_post_images_show_html_erb___3531397600782271081_69902572555620'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:05:59 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (32.8ms)
+Completed 200 OK in 316ms (Views: 297.2ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:13 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (46.6ms)
+Completed 200 OK in 300ms (Views: 287.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 07:06:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 25ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 240ms (Views: 227.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:46 +0000
+Started GET "/users/sign_up" for 10.0.2.2 at 2020-02-08 07:06:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 7ms (ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 290ms (Views: 257.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:46 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:46 +0000
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.2ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (45.9ms)
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 421ms (Views: 398.0ms | ActiveRecord: 5.1ms)
+
+
+Completed 200 OK in 397ms (Views: 369.9ms | ActiveRecord: 2.7ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-02-08 07:06:49 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tMF3zKd2WprCJoCESa706k9OoCkkYfjN4w12Fc/IFIEow3bgN1gnjgYJVbCid5CvPqOReIYl1jFQHIR9rZVY0w=="}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 07:06:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 188ms (Views: 186.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-02-08 07:06:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EQXn5temWqh7M+XUcxL9fSv+ZBnbBrqeHPJkJwQBXAO/XLgLOQ5WE1L3nZWHpoku43x/oLAPMV98wtVfFPSQBQ==", "user"=>{"email"=>"sotto.bw97@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"サインイン"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sotto.bw97@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 207ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:06:52 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.0ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (35.1ms)
+Completed 200 OK in 242ms (Views: 229.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/post_images/1" for 10.0.2.2 at 2020-02-08 07:07:01 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (1.9ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (162.2ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_image' for #<#<Class:0x00007f26fc4b1f20>:0x00007f26fe3bf5c0>):
+    30:               </li>
+    31:             </ul>
+    32:             <div class="post-content-inner mt-20">
+    33:               <p><%= post_image.caption %></p>
+    34:             </div>
+    35:           </div>
+    36: 
+  
+app/views/post_images/show.html.erb:33:in `_app_views_post_images_show_html_erb___3531397600782271081_69902725414820'
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:14:08 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 181ms (Views: 164.8ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/post_images" for 10.0.2.2 at 2020-02-08 07:14:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1rNmJlkg/3lDqy3QVoKjKtmRXtC5PZo3lnGPCAZHl40q96jH3Ez0CvEBkHJA5DnjiC4tEIw3+0u/pKMMOQZ43Q==", "post_image"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007f26fd756770 @tempfile=#<Tempfile:/tmp/RackMultipart20200208-6889-r016va.png>, @original_filename="スクリーンショット 2020-02-08 16.14.33.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"post_image[image]\"; filename=\"\xE3\x82\xB9\xE3\x82\xAF\xE3\x83\xAA\xE3\x83\xBC\xE3\x83\xB3\xE3\x82\xB7\xE3\x83\xA7\xE3\x83\x83\xE3\x83\x88 2020-02-08 16.14.33.png\"\r\nContent-Type: image/png\r\n">, "caption"=>"テスト"}, "commit"=>"送信"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/post_images_controller.rb:9
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:9
+  [1m[36mPostImage Create (4.3ms)[0m  [1m[32mINSERT INTO "post_images" ("image_id", "caption", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["image_id", "e183d2f7f948762cc0013572203788be21e4121716c8c1405cfbe6bf5cd6"], ["caption", "テスト"], ["user_id", 1], ["created_at", "2020-02-08 07:14:50.313447"], ["updated_at", "2020-02-08 07:14:50.313447"]]
+  ↳ app/controllers/post_images_controller.rb:9
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/post_images_controller.rb:9
+Redirected to http://localhost:3000/post_images
+Completed 302 Found in 114ms (ActiveRecord: 14.7ms)
+
+
+Started GET "/post_images" for 10.0.2.2 at 2020-02-08 07:14:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.0ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 297ms (Views: 280.1ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/attachments/46acee576d7a260724ffe863580618f57a3214fa/store/e183d2f7f948762cc0013572203788be21e4121716c8c1405cfbe6bf5cd6/image" for 10.0.2.2 at 2020-02-08 07:14:50 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2020-02-08 07:14:50 +0000] GET "/46acee576d7a260724ffe863580618f57a3214fa/store/e183d2f7f948762cc0013572203788be21e4121716c8c1405cfbe6bf5cd6/image" 200 42.7ms
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:15:26 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 159ms (Views: 144.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:15:27 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 230ms (Views: 209.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:15:29 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 253ms (Views: 211.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:15:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (31.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 216ms (Views: 164.0ms | ActiveRecord: 31.5ms)
+
+
+Started DELETE "/users/sign_out" for 10.0.2.2 at 2020-02-08 07:15:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"dF0amch6RnloY2LUBEhLveMeNxudPLFsUovPNvDSRmkV/rwp4NJIdwSRZS+Wt/by/lCerq6OI9dqEHDn199tng=="}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:15:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 10.0.2.2 at 2020-02-08 07:15:31 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 177ms (Views: 175.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 10.0.2.2 at 2020-02-08 07:15:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QQOC2rv35YFD7bwKGkQyRo4PX2eAdy/ctriT5mFM1Dgtp40qGcuauGieR3tqXMqsCnbL6KjQrsjaCjr6o67f5Q==", "user"=>{"email"=>"sotto.bw97@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"サインイン"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sotto.bw97@gmail.com"], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 190ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:15:34 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 209ms (Views: 197.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/post_images/2" for 10.0.2.2 at 2020-02-08 07:15:36 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (179.8ms)
+Completed 500 Internal Server Error in 238ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_image' for #<#<Class:0x00007f26fc4b1f20>:0x00007f26ec67ba28>):
+    30:               </li>
+    31:             </ul>
+    32:             <div class="post-content-inner mt-20">
+    33:               <p><%= post_image.caption %></p>
+    34:             </div>
+    35:           </div>
+    36: 
+  
+app/views/post_images/show.html.erb:33:in `_app_views_post_images_show_html_erb___3531397600782271081_69902575707420'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:15:37 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.9ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 313ms (Views: 298.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/post_images/3" for 10.0.2.2 at 2020-02-08 07:15:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.5ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (6.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (225.1ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 7.8ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_image' for #<#<Class:0x00007f26fc4b1f20>:0x00007f26fc3b0248>):
+    30:               </li>
+    31:             </ul>
+    32:             <div class="post-content-inner mt-20">
+    33:               <p><%= post_image.caption %></p>
+    34:             </div>
+    35:           </div>
+    36: 
+  
+app/views/post_images/show.html.erb:33:in `_app_views_post_images_show_html_erb___3531397600782271081_69902708608600'
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:15:40 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (1.0ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 253ms (Views: 232.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/post_images/4" for 10.0.2.2 at 2020-02-08 07:15:42 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.7ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (152.9ms)
+Completed 500 Internal Server Error in 200ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_image' for #<#<Class:0x00007f26fc4b1f20>:0x00007f26fe024de8>):
+    30:               </li>
+    31:             </ul>
+    32:             <div class="post-content-inner mt-20">
+    33:               <p><%= post_image.caption %></p>
+    34:             </div>
+    35:           </div>
+    36: 
+  
+app/views/post_images/show.html.erb:33:in `_app_views_post_images_show_html_erb___3531397600782271081_69902723525560'
+Started GET "/post_images/4" for 10.0.2.2 at 2020-02-08 07:21:33 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (1.6ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (793.5ms)
+Completed 200 OK in 1316ms (Views: 1257.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 10.0.2.2 at 2020-02-08 07:21:39 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/index.html.erb within layouts/application
+  [1m[36mPostImage Load (0.6ms)[0m  [1m[34mSELECT "post_images".* FROM "post_images"[0m
+  ↳ app/views/post_images/index.html.erb:7
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/index.html.erb:29
+  Rendered post_images/index.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 250ms (Views: 226.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/post_images/1" for 10.0.2.2 at 2020-02-08 07:21:55 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mPostImage Load (0.8ms)[0m  [1m[34mSELECT  "post_images".* FROM "post_images" WHERE "post_images"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/post_images_controller.rb:18
+  Rendering post_images/show.html.erb within layouts/application
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/post_images/show.html.erb:18
+  Rendered post_images/show.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 345ms (Views: 277.8ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:22:02 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 224ms (Views: 196.9ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:28:58 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 207ms (Views: 194.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:29:05 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 227ms (Views: 201.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:29:06 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 236ms (Views: 226.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:29:10 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 162ms (Views: 148.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/post_images/new" for 10.0.2.2 at 2020-02-08 07:31:53 +0000
+Cannot render console from 10.0.2.2! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostImagesController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /var/lib/gems/2.5.0/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+  Rendering post_images/new.html.erb within layouts/application
+  Rendered post_images/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 180ms (Views: 171.1ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePostComments (20200208073506)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20200208073506_create_post_comments.rb:3
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "post_comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "comment" text, "user_id" integer, "post_image_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200208073506_create_post_comments.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200208073506"]]
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
