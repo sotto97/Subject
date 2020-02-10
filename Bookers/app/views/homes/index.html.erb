@@ -1,0 +1,18 @@
+<div class="container">
+	<p>Books</p>
+</div>
+
+<% if flash[:notice] %>
+	<p class="notice">
+		<%= flash[:notice] %>
+	</p>
+<% end %>
+
+<h1>Welcome to <strong>Bookers</strong> !!</h1>
+
+<p>In Bookers</p><br>
+<p>you can share and exchange your opinions , inpressions , and emotions</p><br>
+<p>about various books!</p>
+
+<%= link_to 'Log in', users_path %>
+<%= link_to 'Sign up', users_path %>

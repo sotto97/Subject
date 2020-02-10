@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bookers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="header" id=header>
+      <ul>
+        <% if user_signed_in? %>
+          <li class="">Home</li>
+          <li class="">About</li>
+          <li class="">Sign in</li>
+          <li class="">Log in</li>
+        <% else %>
+          <li class="">Home</li>
+          <li class="">Users</li>
+          <li class="">Books</li>
+          <li class="">Logout</li>
+        <% end %>
+      </ul>
+      
+    </div>
+    <%= yield %>
+
+    <footer>
+      <p>CopyRight Infratop.inc</p>
+    </footer>
+
+  </body>
+</html>
