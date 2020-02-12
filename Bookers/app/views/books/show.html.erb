@@ -1,0 +1,25 @@
+<!-- Page of /book/:id -->
+
+<%= render 'users/list', book: @book_new %>
+
+<div class="row">
+<div class="col-lg-9">
+	<h2>Book detail</h2>
+	<table class="table table-striped">
+		<tbody>
+			<tr>
+				<td>image</td>
+				<!-- imageの下にusername -->
+				<td class="title">
+					<%= @book.title %>
+				</td>
+				<td class="body">
+					<%= @book.body %>
+				</td>
+				<td>edit</td>
+				<td>destroy</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</div>

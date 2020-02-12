@@ -1,0 +1,41 @@
+<div class="container">
+	<div class="row">
+		<div class="col-lg-3">
+			<h2>User Info</h2>
+			<p>name</p>
+			<p>introduction</p>
+
+			<h2>New Book</h2>
+			<%= form_for(book, url:books_path) do |f| %>
+
+				<% if book.errors.any? %>
+				  <div id="error_explanation" class="alert_error">
+				    <ul>
+			      <% book.errors.full_messages.each do |msg| %>
+			        <li><%= msg %></li>
+			      <% end %>
+				    </ul>
+				  </div>
+				<% end %>
+
+					<div class="field">
+						<p>
+							<%= f.label :title %>
+							<%= f.text_field :title %>
+						</p>
+					</div>
+
+					<div class="field">
+						<p>
+							<%= f.label :body %>
+							<%= f.text_area :body %>
+						</p>
+					</div>
+
+					<p>
+					<%= f.submit "Create Book" %>
+					</p>
+			<% end %>
+		</div>
+	</div>
+</div>

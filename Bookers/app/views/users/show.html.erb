@@ -1,0 +1,40 @@
+<!-- Home users/:id -->
+
+<!-- render　画面左 -->
+<%= render 'users/list', book: @book_new %>
+<!-- ここまでrender -->
+
+<!-- 画面右側 -->
+<div>
+	<div class="row">
+		<div class="col-lg-9">
+			<h2>Books</h2>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>title</th>
+						<th>opinion</th>
+					</tr>
+				</thead>
+				<% @books.each do |book| %>
+				<tbody>
+					<tr>
+						<th class="block-image">
+							image <!-- 四角い形のかおの写真が入る -->
+						</th>
+						<th class="title">
+							<%= link_to book_path(book.id) do %>
+							<%= book.title %>
+							<% end %>
+						</th>
+						<th class="body">
+							<%= book.body %>
+						</th>
+					</tr>
+				</tbody>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>
