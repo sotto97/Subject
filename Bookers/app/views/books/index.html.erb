@@ -1,15 +1,37 @@
-<!-- Page of /books 全ユーザーの投稿一覧　-->
+<!-- Page of /books 全userの投稿一覧　-->
 
-<%= render 'users/list', book: @book %>
+<%= render 'users/list', book: @book_new %>
 
 <div class="container">
 	<div class="row">
 		<div class="col-lg-9">
-			<h1>Books</h1>
-			<h1>INDEX</h1>
-			<p>profile image</p>
-			<p>title</p>
-			<p>opinion</p>
+			<h2>Books</h2>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th></th>
+						<th>title</th>
+						<th>opinion</th>
+					</tr>
+				</thead>
+				<% @books.each do |book| %>
+				<tbody>
+					<tr>
+						<th class="block-image">
+							image <!-- 四角い形のかおの写真が入る -->
+						</th>
+						<th class="title">
+							<%= link_to book_path(book.id) do %>
+							<%= book.title %>
+							<% end %>
+						</th>
+						<th class="body">
+							<%= book.body %>
+						</th>
+					</tr>
+				</tbody>
+				<% end %>
+			</table>
 		</div>
 	</div>
 </div>

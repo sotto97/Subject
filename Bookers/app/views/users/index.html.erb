@@ -1,1 +1,35 @@
-<p>INDEX</p>
+<!-- Page of /users 全user一覧 -->
+
+<%= render 'users/list', book: @book_new %>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-9">
+			<h2>Users</h2>
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>image</th>
+						<th>name</th>
+						<th></th>
+					</tr>
+				</thead>
+				<% @users.each do |user| %>
+				<tbody>
+					<tr>
+						<th class="block-image">
+							image <!-- 四角い形のかおの写真が入る -->
+						</th>
+						<th class="name">
+							<%= user.username %>
+						</th>
+						<th class="show">
+							<%= link_to "show", user_path(user.id) %>
+						</th>
+					</tr>
+				</tbody>
+				<% end %>
+			</table>
+		</div>
+	</div>
+</div>

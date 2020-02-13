@@ -2,8 +2,15 @@
 	<div class="row">
 		<div class="col-lg-3">
 			<h2>User Info</h2>
-			<p>name</p>
-			<p>introduction</p>
+			<div class="user-image">
+				<%= image_tag('sample1.jpg', class:"img-square pull-left profile-img", style: "width: 100px; height: 100px; margin-top: 20px;") %>
+			</div>
+			<p class="profile-name">username: <%= @user.username %></p>
+			<p class="profile-introduction">introduction</p>
+			<% if @user.id == current_user.id %>
+				<p><%= link_to "Profile Edit", edit_user_path(@user), class: "pull-right" %></p>
+			<% end %>
+
 
 			<h2>New Book</h2>
 			<%= form_for(book, url:books_path) do |f| %>

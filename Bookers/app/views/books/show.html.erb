@@ -16,8 +16,16 @@
 				<td class="body">
 					<%= @book.body %>
 				</td>
-				<td>edit</td>
-				<td>destroy</td>
+				<td>
+					<% if @book.user == current_user %>
+						<%= link_to "Edit", edit_book_path %>
+					<% end %>
+				</td>
+				<td>
+					<% if @book.user == current_user %>
+						<%= link_to "Destroy", book_path(@book), method: :delete, data: {confirm: 'Are you sure?' } %>
+					<% end %>
+				</td>
 			</tr>
 		</tbody>
 	</table>

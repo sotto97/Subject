@@ -4,7 +4,15 @@ class UsersController < ApplicationController
 		@user = User.find(params[:id])
 		@book_new = Book.new
 		@book = Book.find(params[:id])
-		@books = Book.all
+		# @bookse = Book.all
+		@books = @user.books.page(params[:page]).reverse_order  # ここを記述
+
+	end
+
+	def index
+		@user = User.find(params[:id])
+		@book_new = Book.new
+		@users = User.all
 	end
 
 	def new
@@ -14,9 +22,17 @@ class UsersController < ApplicationController
   end
 
 	def edit
+		@user = User.find(params[:id])
+	end
+
+	def update
+		@user = User.find(params[:id])
+		@user.update(user_params)
+		redirect_to user_path(@user.id)
 	end
 
 	private
 	def user_params
+		params.require(:user).permit(:username, :introduction, :profile_image)
 	end
 end
