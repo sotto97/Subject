@@ -1,12 +1,16 @@
 <!-- Home users/:id -->
+<!-- done it -->
 
+<% if flash[:notice] %>
+	<p class="notice">
+		<%= flash[:notice] %>
+	</p>
+<% end %>
 <!-- render　画面左 -->
 <%= render 'users/list', book: @book_new %>
 <!-- ここまでrender -->
 
 <!-- 画面右側 -->
-<div>
-	<div class="row">
 		<div class="col-lg-9">
 			<h2>Books</h2>
 			<table class="table table-striped">
@@ -19,9 +23,11 @@
 				</thead>
 				<% @books.each do |book| %>
 				<tbody>
-					<tr>
+					<tr style="background-color: #fff;">
 						<th class="block-image">
-							image <!-- 四角い形のかおの写真が入る -->
+							<%= link_to user_path(@user.id) do %>
+							<%= image_tag('sample1.jpg', class:"img-square pull-left profile-img", style: "width: 40px; height: 40px;") %>
+							<% end %>
 						</th>
 						<th class="title">
 							<%= link_to book_path(book.id) do %>

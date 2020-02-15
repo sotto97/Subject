@@ -3,16 +3,15 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@book_new = Book.new
-		@book = Book.find(params[:id])
-		# @bookse = Book.all
+		# @book = Book.find(params[:id])
 		@books = @user.books.page(params[:page]).reverse_order  # ここを記述
 
 	end
 
 	def index
-		@user = User.find(params[:id])
-		@book_new = Book.new
+		@user = User.find(current_user.id)
 		@users = User.all
+		@book_new = Book.new
 	end
 
 	def new
@@ -27,12 +26,14 @@ class UsersController < ApplicationController
 
 	def update
 		@user = User.find(params[:id])
-		@user.update(user_params)
-		redirect_to user_path(@user.id)
+		if @user.update(user_params)
+			flash[:notice]='successfully'
+			redirect_to user_path(@user.id)
+		end
 	end
 
 	private
 	def user_params
-		params.require(:user).permit(:username, :introduction, :profile_image)
+		params.require(:user).permit(:name, :introduction, :profile_image)
 	end
 end

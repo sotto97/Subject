@@ -1,33 +1,44 @@
 <!-- Page of /book/:id -->
+<!-- image 設定 -->
+
+<% if flash[:notice] %>
+	<p class="notice">
+		<%= flash[:notice] %>
+	</p>
+<% end %>
 
 <%= render 'users/list', book: @book_new %>
 
-<div class="row">
-<div class="col-lg-9">
+	<div class="col-lg-9">
 	<h2>Book detail</h2>
 	<table class="table table-striped">
 		<tbody>
-			<tr>
-				<td>image</td>
-				<!-- imageの下にusername -->
+			<tr style="background-color: #fff;">
+				<td class="user-image">
+					<%= link_to user_path(@user.id) do %>
+						<%= image_tag('sample1.jpg', class:"img-square pull-left profile-img", style: "width: 100px; height: 100px;") %>
+						<%= @user.name %>
+					<% end %>
+				</td>
 				<td class="title">
+					<%= link_to book_path do %>
 					<%= @book.title %>
+					<% end %>
 				</td>
 				<td class="body">
 					<%= @book.body %>
 				</td>
 				<td>
 					<% if @book.user == current_user %>
-						<%= link_to "Edit", edit_book_path %>
+						<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px;"><%= link_to "Edit", edit_book_path %></button>
 					<% end %>
 				</td>
 				<td>
 					<% if @book.user == current_user %>
-						<%= link_to "Destroy", book_path(@book), method: :delete, data: {confirm: 'Are you sure?' } %>
+						<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px;"><%= link_to "Destroy", book_path(@book), method: :delete, data: {confirm: 'Are you sure?' } %></button>
 					<% end %>
 				</td>
 			</tr>
 		</tbody>
 	</table>
-</div>
 </div>
