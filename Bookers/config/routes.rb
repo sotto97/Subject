@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   get '/home/about', to: 'homes#show'
 
-  resources :users, only: [:show, :index, :new, :create, :edit, :update] do
-  	resource :books, only: [:create, :show]
+  resources :users, only: [:show, :index, :new, :create, :edit, :update, :ensure_correct_user] do
+  	resource :books, only: [:create, :show, :index]
   end
 
-  resources :books, only: [:new, :index, :create, :show, :edit, :destroy, :update]
+  resources :books, only: [:new, :index, :create, :show, :edit, :destroy, :update, :ensure_correct_user]
 end

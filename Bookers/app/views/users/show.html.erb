@@ -11,30 +11,30 @@
 <!-- ここまでrender -->
 
 <!-- 画面右側 -->
-		<div class="col-lg-9">
+		<div class="col-xs-9">
 			<h2>Books</h2>
-			<table class="table table-striped">
+			<table class="table table">
 				<thead>
 					<tr>
-						<th></th>
-						<th>title</th>
-						<th>opinion</th>
+						<th class="col-xs-1"></th>
+						<th class="col-xs-1">Title</th>
+						<th class="col-xs-7">Opinion</th>
 					</tr>
 				</thead>
 				<% @books.each do |book| %>
 				<tbody>
-					<tr style="background-color: #fff;">
-						<th class="block-image">
+					<tr>
+						<th class="col-xs-1 block-image">
 							<%= link_to user_path(@user.id) do %>
-							<%= image_tag('sample1.jpg', class:"img-square pull-left profile-img", style: "width: 40px; height: 40px;") %>
+							<%= attachment_image_tag @user,:profile_image, :fill, 40, 40, format: 'jpg', class: "img-square pull-left profile-img", size: '40x40', fallback:"sample1.jpg" %>
 							<% end %>
 						</th>
-						<th class="title">
+						<th class="col-xs-1 title">
 							<%= link_to book_path(book.id) do %>
 							<%= book.title %>
 							<% end %>
 						</th>
-						<th class="body">
+						<th class="col-xs-7 body">
 							<%= book.body %>
 						</th>
 					</tr>

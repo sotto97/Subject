@@ -1,6 +1,12 @@
 <h2>Editing Book</h2>
 <%= form_for(@book, url: "/books/#{@book.id}") do |f| %>
 
+	<% if flash[:notice] %>
+		<p class="notice">
+			<%= flash[:notice] %>
+		</p>
+	<% end %>
+
 	<div class="field">
 		<p>
 		<%= f.label :title %><br>
@@ -22,3 +28,9 @@
 	</div>
 
 <% end %>
+
+<p class="space">
+<a><%= link_to "Show", book_path(@book) %></a>
+&thinsp;|&thinsp;
+<a><%= link_to "Back", books_path %></a>
+</p>

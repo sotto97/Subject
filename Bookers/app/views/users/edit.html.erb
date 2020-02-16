@@ -4,6 +4,12 @@
 <h2>User info</h2>
 <%= form_for(@user, url: "/users/#{@user.id}") do |f| %>
 
+	<% if flash[:notice] %>
+		<p class="notice">
+			<%= flash[:notice] %>
+		</p>
+	<% end %>
+
 	<div class="field">
 		<p>
 		<%= f.label :name %><br>
