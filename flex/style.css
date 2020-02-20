@@ -1,0 +1,87 @@
+.header {
+	background-color: #eee;
+	width: 100%;
+	height: auto;
+	padding: 30px 20px;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.header > div {
+	background-color: #fff;
+	margin: 0 10px;
+	height: 70px;
+	width: 140px;
+}
+
+.header > :first-child {
+	margin-right: auto;
+}
+
+.container {
+	background-color: red;
+	width: 1000px;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box1 {
+	flex: 3;
+}
+
+.box2 {
+	flex: 7;
+	padding: 20px;
+	background-color: blue;
+	justify-content: flex-start;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.box2 > div {
+	background-color: green;
+	height: 130px;
+	width: 200px;
+	margin: 10px;
+}
+
+.footer {
+	width: 100%;
+	height: auto;
+	background-color: pink;
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.footer > div {
+	width: 600px;
+	flex-basis: 45%;
+	height: 40px;
+	background-color: grey;
+	margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
