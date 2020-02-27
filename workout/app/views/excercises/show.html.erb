@@ -1,0 +1,31 @@
+<!-- userのexcercise一覧 -->
+<!-- 	/excercises/:id(.:format) -->
+<%= render "users/list", excercise: @excercise_new %>
+
+			<div class="row">
+				<h2 style="color: orange;  font-size: 25px; text-align: center;">My Workout Log</h2>
+				<table class="table table">
+					<thead>
+						<tr>
+							<th class="col-xs-1">Target</th>
+							<th class="col-xs-3">Excercise Name</th>
+							<th class="col-xs-1">Reps</th>
+							<th class="col-xs-1">Sets</th>
+						</tr>
+					</thead>
+					<% @excercises.each do |excercise| %>
+						<tbody>
+							<tr>
+								<th class="col-xs-1"><%= excercise.target %></th>
+								<th class="col-xs-3"><%= excercise.excercise_name %></th>
+								<th class="col-xs-1"><%= excercise.reps %></th>
+								<th class="col-xs-1"><%= excercise.sets %></th>
+							</tr>
+						</tbody>
+					<% end %>
+				</div>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

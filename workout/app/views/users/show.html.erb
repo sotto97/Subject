@@ -1,0 +1,40 @@
+<!-- userのexcercise一覧 -->
+<!-- users/:id -->
+<%= render 'users/list', excercise: @excercise_new %>
+
+			<div class="row row">
+				<h2 style="font-size: 25px; text-align: center;">My Workout Log</h2>
+				<table class="table table">
+					<thead>
+						<tr>
+							<th class="col-xs-1">Target</th>
+							<th class="col-xs-1">Excercise Name</th>
+							<th class="col-xs-1">Reps</th>
+							<th class="col-xs-1">Sets</th>
+						</tr>
+					</thead>
+					<tbody>
+						<% @excercises.each do |excercise| %>
+							<tr>
+								<th class="col-xs-1"><%= excercise.target %></th>
+								<th class="col-xs-1"><%= excercise.excercise_name %></th>
+								<th class="col-xs-1"><%= excercise.reps %></th>
+								<th class="col-xs-1"><%= excercise.sets %></th>
+								<th class="col-xs-1">
+									<% if @user.id == current_user.id %>
+									<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px; background-color: black;"><%= link_to "Edit", edit_excercise_path, style:"color: white;" %></button>
+									<% end %>
+								</th>
+								<th class="col-xs-1">
+									<% if @user.id == current_user.id %>
+									<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px; background-color: black;"><%= link_to "Delete",excercise_path, method: :delete, style:"color: white;" %></button>
+									<% end %>
+								</th>
+							</tr>
+						<% end %>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
