@@ -61,7 +61,8 @@
 		</div>
 		<!-- create action -->
 		<div class="col-xs-9">
-			<h2 style="font-size: 25px; text-align: center;">Today's Workout Menu</h2>
+			<h2 style="font-size: 25px; text-align: center;">
+				<i class="fas fa-dumbbell"></i>Today's Workout Menu</h2>
 			<%= form_for(excercise, url:excercises_path) do |f| %>
 
 				<% if excercise.errors.any? %>
