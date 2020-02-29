@@ -1,12 +1,14 @@
 class UsersController < ApplicationController
 	before_action :authenticate_user!
+  before_action :ensure_correct_user, only: [:edit, :update]
+
 
 	def show
 		@user = User.find(params[:id])
 		@excercise_new = Excercise.new
-		@excercises = @user.excercises
+		@excercises = @user.excercises.all
 		@event = Event.new
-		@excercise = Excercise.find(params[:id])
+		# @user.excercise = Excercise.find(params[:id])
 	end
 
 	def create
@@ -35,7 +37,10 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def destroy
+	def ensure_correct_user
+		if current_user.id = params[:id].to_i
+		redirect_to user_path
+		end
 	end
 
 	private

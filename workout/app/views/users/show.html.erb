@@ -7,27 +7,35 @@
 				<table class="table table">
 					<thead>
 						<tr>
+							<th class="col-xs-1">Name</th>
 							<th class="col-xs-1">Target</th>
-							<th class="col-xs-1">Excercise Name</th>
+							<th class="col-xs-2">Excercise Name</th>
 							<th class="col-xs-1">Reps</th>
 							<th class="col-xs-1">Sets</th>
+							<th class="col-xs-1"></th>
+							<th class="col-xs-1"></th>
 						</tr>
 					</thead>
 					<tbody>
 						<% @excercises.each do |excercise| %>
 							<tr>
+								<th class="col-xs-1 block-image">
+									<%= link_to user_path(@user.id) do %>
+									<%= attachment_image_tag @user,:profile_image, :fill, 40, 40, format: 'jpg', class: "img-square pull-left profile-img", size: '40x40', fallback:"sample1.jpg" %>
+									<% end %>
+								</th>
 								<th class="col-xs-1"><%= excercise.target %></th>
-								<th class="col-xs-1"><%= excercise.excercise_name %></th>
+								<th class="col-xs-2"><%= excercise.excercise_name %></th>
 								<th class="col-xs-1"><%= excercise.reps %></th>
 								<th class="col-xs-1"><%= excercise.sets %></th>
 								<th class="col-xs-1">
 									<% if @user.id == current_user.id %>
-									<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px; background-color: black;"><%= link_to "Edit", edit_excercise_path, style:"color: white;" %></button>
+									<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px; background-color: black;"><%= link_to "Edit", edit_excercise_path(excercise.id), style:"color: white;" %></button>
 									<% end %>
 								</th>
 								<th class="col-xs-1">
 									<% if @user.id == current_user.id %>
-									<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px; background-color: black;"><%= link_to "Delete",excercise_path, method: :delete, style:"color: white;" %></button>
+									<button class="btn btn-default visible-lg-block" style="text-align: center; border-radius: 4px; background-color: black;"><%= link_to "Delete",excercise_path(excercise.id), method: :delete, style:"color: white;" %></button>
 									<% end %>
 								</th>
 							</tr>

@@ -1,26 +1,90 @@
-<h2>Log in</h2>
+<style>
+  .login {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+    border: 3px solid #d9d9d9;
+    padding: 40px;
+    text-align: center;
+  }
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  h2 {
+    margin: 0px;
+    padding-bottom: 25px;
+    font-size: 4rem;
+  }
+
+  .field .form {
+    width: 50%;
+    top: 0;
+    left: 0;
+    border: none;
+    border-bottom: 2px solid #d9d9d9;
+    font-size: 18px;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.8rem;
+    color: #555;
+  }
+
+  .actions {
+    width: 100%;
+  }
+
+  .actions .sign {
+    width: 100%;
+    height: 40px;
+    background-size: 200%;
+    display: block;
+    text-align: center;
+    line-height: 200%;
+    border-radius: 10px;
+    margin: 1rem 0;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #32be8f, #38d39f, #32be8f);
+    cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+  }
+</style>
+
+
+<div class="container">
+  <div class="login">
+
+    <h2>Log in</h2>
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+      <div class="field">
+        <i class="fas fa-user"></i>
+        <%= f.label :name %><br />
+        <%= f.text_field :name, autofocus: true, autocomplete: "name", class:"form" %>
+      </div>
+
+      <div class="field">
+        <i class="fas fa-lock"></i>
+        <%= f.label :password %><br />
+        <%= f.text_field :password, autocomplete: "current-password", class:"form", type:"password" %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "Log in", class:"sign" %>
+      </div>
+    <% end %>
+
+    <p>OR</p>
+    <%= render "devise/shared/links" %>
+
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.text_field :password, autocomplete: "current-password" %>
-  </div>
-
-  <% if devise_mapping.rememberable? %>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

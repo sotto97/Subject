@@ -1,5 +1,6 @@
 class ExcercisesController < ApplicationController
 	before_action :authenticate_user!
+  before_action :ensure_correct_user, only: [:edit, :update, :destroy]
 
 	def new
 		excercise = Excercise.new
@@ -28,18 +29,24 @@ class ExcercisesController < ApplicationController
 		if @excercise_new.save
 			redirect_to user_path(@user.id)
 		else
-			render :show
+			render :edit
 		end
 	end
 
 	def edit
-		@user = User.find(params[:id])
+		@excercise = Excercise.find(params[:id])
 	end
 
 	def destroy
 		@excercise = Excercise.find(params[:id])
 		@excercise.destroy
 		redirect_to user_path
+	end
+
+	def ensure_correct_user
+		if current_user.id = params[:id].to_i
+		redirect_to user_path
+		end
 	end
 
 	private

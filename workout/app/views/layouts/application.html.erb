@@ -7,49 +7,119 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <meta name="viewport" content="width=device-width, initial=scale=1">
+    <script src="https://kit.fontawesome.com/a55a36e434.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Spartan:500&display=swap" rel="stylesheet">
 
+    <style>
+      * {
+        font-family: 
+      }
+      .header {
+        background-color: #222;
+        color: white;
+        width: 100%;
+        height: 115px;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .title p {
+        padding-top: 30px;
+        font-size: 30px;
+        cursor: pointer;
+      }
+
+      ul li a {
+        text-align: center;
+      }
+
+      ul li a:hover {
+        background-color: transparent!important;
+        float: none;
+      }
+
+      .nav {
+        color: #9d9d9d;
+        justify-content: center;
+      }
+
+      .nav ul{
+        display: flex;
+        padding-top: 10px;
+      }
+
+      .footer-menu-item {
+        margin-bottom: 10px;
+        width: 30%;
+      }
+
+      .nav.list-inline {
+        text-align: center;
+      }
+
+      .footer {
+        background-color: #222;
+        color: white;
+        width: 100%;
+        height: 200vh;
+        padding: 5%;
+        text-decoration: none;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-left: 0 auto;
+      }
+    </style>
+  </head>
   <body>
-    <div id="header" class="heaader" style="background-color: #222; color: white; width: 100%;height: 130px;">
-      <!-- <div class="cotainer"> -->
-        <span class="title" style="text-align: center;"><p  style="padding-top: 30px; font-size: 30px;">Management</p></span>
-        <ul class="nav navbar-nav navbar-center list-inline" style="color: #9d9d9d; padding: 10px; text-align: center;">
-          <% if user_signed_in? %>
-            <li class="#">
-              <%= link_to "Home", user_path(current_user.id), class: "glyphicon glyphicon-home", style:"color: white;" %>
-            </li>
-            <li class="#">
-              <%= link_to "Users Workout Diary", excercises_path, class: "glyphicon glyphicon-tasks", style:"color: white;" %>
-            </li>
-            <li class="#">
-              <%= link_to "Schedule", events_path, class: "glyphicon glyphicon-calendar", style:"color: white;" %>
-            </li>
-            <li class="#">
-              <%= link_to "Log Out", destroy_user_session_path, method: "delete", class: "glyphicon glyphicon-log-out", style:"color: white;" %>
-            </li>
-          <% else %>
-            <li class="#">
-              <%= link_to "Home", root_path, class: "glyphicon glyphicon-home", style:"color: white;" %>
-            </li>
-            <li>
-              <%= link_to "About Workout", home_about_path, class: "glyphicon glyphicon-fire", style:"color: white;" %>
-            </li>
-            <li class="#">
-              <%= link_to "Sign In", new_user_registration_path, class: "glyphicon glyphicon-new-window", style:"color: white;" %>
-            </li>
-            <li class="#">
-              <%= link_to "Log In", new_user_session_path, class: "glyphicon glyphicon-log-in", style:"color: white;" %>
-            </li>
-          <% end %>
-        </ul>
-      <!-- </div> -->
+    <div id="header" class="header">
+        <span class="title">
+          <p>Management</p>
+        </span>
+        <div class="nav">
+          <ul class="nav list-inline">
+            <% if user_signed_in? %>
+              <li class="#">
+                <%= link_to "Home", user_path(current_user.id), class: "glyphicon glyphicon-home", style:"color: white;" %>
+              </li>
+              <li class="#">
+                <%= link_to "Users Workout Diary", excercises_path, class: "glyphicon glyphicon-tasks", style:"color: white;" %>
+              </li>
+              <li class="#">
+                <%= link_to "Schedule", events_path, class: "glyphicon glyphicon-calendar", style:"color: white;" %>
+              </li>
+              <li class="#">
+                <%= link_to "Log Out", destroy_user_session_path, method: "delete", class: "glyphicon glyphicon-log-out", style:"color: white;" %>
+              </li>
+            <% else %>
+              <li class="#">
+                <%= link_to "Home", root_path, class: "glyphicon glyphicon-home", style:"color: white;" %>
+              </li>
+              <li>
+                <%= link_to "About Workout", home_about_path, class: "glyphicon glyphicon-fire", style:"color: white;" %>
+              </li>
+              <li class="#">
+                <%= link_to "Sign In", new_user_registration_path, class: "glyphicon glyphicon-new-window", style:"color: white;" %>
+              </li>
+              <li class="#">
+                <%= link_to "Log In", new_user_session_path, class: "glyphicon glyphicon-log-in", style:"color: white;" %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
     </div>
     <%= yield %>
-    <footer>
-      <div class="footer" style="background-color: #222; color: white; width: 100%; height: auto; padding: 5%;">
-        <div class="grid__item one-third medium--one-half small--one-whole footer-menu-wrapper">
+
+  <!-- 一時的に消す -->
+
+      <footer>
+      <div class="footer">
+        <div class="grid_item one-third medium-one-half small-one-whole footer-menu-wrapper">
           <div class="footer-menu">
-            <div class="footer-menu-item" style="margin-bottom: 10px; width: 30%;">
+            <div class="footer-menu-item">
               <p class="footer-menu-title">About</p>
               <ul class="footer-menu-links">
                 <li>copy</li>
@@ -61,35 +131,7 @@
             </div>
           </div>
         </div>
-<!--         <div class="grid__item one-third medium--one-half small--one-whole footer-menu-wrapper">
-          <div class="footer-menu">
-            <div class="footer-menu-item" style="margin-bottom: 10px; width: 30%;">
-              <p class="footer-menu-title">About</p>
-              <ul class="footer-menu-links">
-                <li>copy</li>
-                <li>copy</li>
-                <li>copy</li>
-                <li>copy</li>
-                <li>copy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="grid__item one-third medium--one-half small--one-whole footer-menu-wrapper">
-          <div class="footer-menu">
-            <div class="footer-menu-item" style="margin-bottom: 10px; width: 30%;">
-              <p class="footer-menu-title">About</p>
-              <ul class="footer-menu-links">
-                <li>copy</li>
-                <li>copy</li>
-                <li>copy</li>
-                <li>copy</li>
-                <li>copy</li>
-              </ul>
-            </div>
-          </div>
-        </div> -->
-        <div style="text-align: center; margin: 0 auto;">
+        <div class="footer-bottom">
           <p>CopyRight Management</p>
         </div>
       </div>

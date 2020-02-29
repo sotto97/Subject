@@ -1,0 +1,48 @@
+<h2>Editing Excercise</h2>
+<%= form_for(@excercise, url: "/excercises/#{@excercise.id}") do |f| %>
+
+<!-- 	<% if flash[:notice] %>
+		<p class="notice">
+			<%= flash[:notice] %>
+		</p>
+	<% end %> -->
+
+	<div class="field" style="float: left">
+		<p>
+			<%= f.label :target %>
+			<%= f.text_field :target %>
+		</p>
+	</div>
+
+		<div class="field" style="float: left">
+		<p>
+			<%= f.label :excercise_name %>
+			<%= f.text_field :excercise_name %>
+		</p>
+	</div>
+
+	<div class="field" style="float: left">
+		<p>
+			<%= f.label :reps %>
+			<%= f.text_field :reps, :size=>"5" %>
+		</p>
+	</div>
+
+	<div class="field" style="float: left">
+		<p>
+			<%= f.label :sets %>
+			<%= f.text_field :sets, :size=>"5" %>
+		</p>
+	</div>
+
+	<p style="text-align: center; color: white;">
+		<%= f.submit "New Menu", style:"border-radius: 5px; background-color: black;" %>
+	</p>
+
+<% end %>
+
+<p class="space">
+<a><%= link_to "Show", excercise_path %></a>
+&thinsp;|&thinsp;
+<a><%= link_to "Back", excercises_path %></a>
+</p>

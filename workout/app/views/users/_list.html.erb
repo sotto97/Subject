@@ -8,6 +8,27 @@
 	.row > div {
 		border: 0.5px solid #dcdcdc;
 	}
+	.btn.edit {
+		width: 100%;
+		height: 40px;
+		background-size: 200%;
+		display: block;
+		text-align: center;
+		line-height: 200%;
+		border-radius: 10px;
+		margin: 1rem 0;
+		font-size: 20px;
+		outline: none;
+		border: none;
+		background-color: #9d9d9d;
+		cursor: pointer;
+		color: #fff;
+		text-decoration: none;
+	}
+
+	.btn.edit i {
+		font-size: 20px;
+	}
 </style>
 <div class="container" style="padding: 20px 0">
 	<div class="row row">
@@ -27,11 +48,12 @@
 				</tbody>
 			</table>
 			<div class="user-image" style="text-align: center;">
-				<%= attachment_image_tag @user,:profile_image, :fill, 100, 100, format: 'png' 'jpg', class: "image-circle pull-center profile-img", fallback:"sample1.jpg" %>
+				<%= attachment_image_tag @user,:profile_image, :fill, 100, 100, format: 'png, jpg', class: "image-circle pull-center profile-img", fallback:"sample1.jpg" %>
 			</div>
 		 <% if @user.id == current_user.id %>
-			<div class="edit" style="width: 100%; height: 20px;">
-				<botton class="btn btn-default visible-lg-block"><%= link_to '', edit_user_path(@user), class: "glyphicon glyphicon-edit" %></botton>
+			<div class="btn edit">
+				<i class="fas fa-edit"></i>
+				<%= link_to '', edit_user_path(@user) %>
 			</div>
 		　<% end %>
 			<h2 style="font-size: 20px; text-align: center;">Schedule</h2>
